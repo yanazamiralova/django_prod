@@ -1,0 +1,27 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+
+{% block content %}
+
+
+    {% if order %}
+        {% for elem in order%}
+    <div class="tovars">
+            <h2>{{elem.prod}}</h2>
+            <h2>{{elem.price}}</h2>
+
+        </div>
+
+        {% endfor %}
+    {% else %}
+    <h1>Заказы не найдены</h1>
+    {% endif %}
+
+</table>
+
+
+{% endblock %}
